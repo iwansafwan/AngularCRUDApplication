@@ -1,8 +1,16 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideZone } from '@angular/core';
 
-import { routes } from './app.routes';
+// Remove the following imports and configuration:
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+// appConfig is not needed anymore for routing setup
+
+// Define any other configurations or providers you need here
+export const appConfig = {
+  providers: [
+    provideZone({ eventCoalescing: true })
+    // Add more providers as needed
+  ]
 };
